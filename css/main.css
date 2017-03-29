@@ -8,6 +8,10 @@ img  {
   max-width: 100%;
   height: auto;
 }
+  img[alt="download"]  {
+      width:35px;
+      vertical-align:middle;
+  }
 
 h1  {
     font-family: 'Nothing You Could Do', cursive;
@@ -34,7 +38,7 @@ input  {
     margin-top: 5vh;
     margin-left: 30vw;
     width: 50vw;
-    height: 9vh;
+    height: 7vh;
     border-radius: 15px;
     font-size: 1.7rem;
     border: solid 2px #517E9D;
@@ -46,6 +50,15 @@ input  {
     margin-top: 7vh;
     height: 7vh;
 
+}
+
+a[href*= "//www.youtubeinmp3.com/fetch/"]  {
+    display: block;
+    margin-top: 4rem;
+    margin-left: 48vw;
+    font-size: 3rem;
+    color:#03a730;
+    text-decoration:none;
 }
 
 
