@@ -14,9 +14,20 @@ img  {
   }
   img[alt="youtube_logo"]  {
     width: 8vw;
-    max-height: 17vh;
-    max-width: 9vw;
+    height: auto;
+    margin-left: 80vw;
+    cursor: pointer;
   }
+      figcaption  {
+        font-size: 1.5rem;
+        margin-left: 80vw;
+      }
+
+nav  {
+    width: 100%;
+    height: 12vh;
+}
+
 
 h1  {
     font-family: 'Nothing You Could Do', cursive;
@@ -27,6 +38,21 @@ h1  {
 
 main {
     position: relative;
+}
+
+form input  {
+    display: block;
+    width: 35vw;
+    height: 5vh;
+    margin: 3vh auto;
+}
+
+form select  {
+    display: block;
+    margin: 3vh auto;
+    width: 15vw;
+    height: 6vh;
+    font-size: 1.3rem;
 }
 
 label  {
@@ -51,6 +77,14 @@ input  {
 }
 
 
+#youtube_submit  {
+    border: 1px solid grey;
+    font-size: 24px;
+    border-radius: 8px;
+    width: 15vw;
+    cursor: pointer;
+}
+
 a[href*= "//www.youtubeinmp3.com/fetch/"]  {
     display: block;
     margin-top: 4rem;
@@ -60,4 +94,7 @@ a[href*= "//www.youtubeinmp3.com/fetch/"]  {
     text-decoration:none;
 }
 
-
+.hidden  {
+   display: none;
+   visibility: hidden;
+}

@@ -14,8 +14,8 @@ oEl.addEventListener("blur", function (e) {
     hrefValue += searchValue;
 
     oDwnLdEl.setAttribute("href",hrefValue);
-
 });
 
 
-
+var oyouTubeLogo = document.querySelector('.youtube_form');
+console.log(oyouTubeLogo);
