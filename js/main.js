@@ -17,5 +17,10 @@ oEl.addEventListener("blur", function (e) {
 });
 
 
-var oyouTubeLogo = document.querySelector('.youtube_form');
-console.log(oyouTubeLogo);
+var oyouTubeSearch = document.querySelector('.youtube_search');
+var oyouTubeLogo = document.querySelector('img[alt="youtube_logo"]');
+
+// Event Handler to toggle visibility of search form
+oyouTubeLogo.addEventListener("click", function(e){
+    oyouTubeSearch.classList.toggle("hidden");
+})
