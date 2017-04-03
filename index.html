@@ -12,16 +12,17 @@
     <nav> <img src="img/Youtube-icon.png" alt="youtube_logo"> </nav>
 
    <!-- ======================  YouTube Search Form =============-->
-    <div class="hidden youtube_search">
+    <div class="hidden" id="youtube_search_form">
      <form action="http://www.youtube.com/results" method="get" target="_blank">
-         <input name="search_query" type="text" placeholder="Enter Video Name" required>
+         <label>YouTube Search</label>
+         <input id="search_query" type="text" placeholder="  Search Video" required>
          <input type="submit" id="youtube_submit" value="Submit">
       </form>
-    </div>
+   </div>
     <h1>YouTube to MP3 Downloader</h1>
     <main>
         <label>A Quick Way To Download MP3s from YouTube</label>
-        <input id="input_value" type="text" placeholder=" Paste YouTube ID Code: ie. i62Zjga8JOM" required autofocus>
+        <input id="video_tag_value" type="text" placeholder=" Paste YouTube ID Code: ie. i62Zjga8JOM" required autofocus>
         <a href='//www.youtubeinmp3.com/fetch/?video=https://www.youtube.com/watch?v='> <img src='//www.youtubeinmp3.com/icon/download.png' alt="download"> <strong>Download MP3</strong> </a>
     </main>
 
