@@ -1,11 +1,20 @@
 function cleanEmbedCode (str)  {
-    if (str.search("embed/"))  {
-      console.log("I'm in. Embed code= " + str);
-      let n = str.search("embed/");
+   if (str.indexOf('embed') > -1)  {
+      let n = str.search(/embed\//);
       str = str.substr(n + 6, 50);
       let p = str.indexOf('"');
       str = str.substr(0, p);
     }
+    else if (str.indexOf('\?v=' > -1)) {
+      let q = str.search(/\?v=/);
+      str = str.substr(q + 3, 50);
+      let r = str.length;
+      str = str.substr(0, r);
+    }
+    else  {
+        alert("Invalid Embed Code: " + str);
+    }
+
     return str;
 }
 
@@ -23,13 +32,20 @@ oEl.addEventListener("blur", function (e) {
        //Retrieve text from input box
     var searchValue = document.getElementById('video_tag_value').value;
     searchValue = cleanEmbedCode(searchValue);
-    console.log("SearchValue is : " + searchValue);
     e.target.style.background = "#FFFFFF";
 
     var oDwnLdEl = document.querySelector('a[href*= "//www.youtubeinmp3.com/fetch/"]');
     var hrefValue = oDwnLdEl.getAttribute("href");
     hrefValue += searchValue;
-    oDwnLdEl.setAttribute("href",hrefValue);
+    console.log("searchValue: " + searchValue);
+    console.log("hrefValue: " + hrefValue);
+    console.log("searchValue.length is: " + searchValue.length)
+    console.log("indexOf value" + hrefValue.indexOf(searchValue));
+    if ((hrefValue.indexOf(searchValue) === 0) && (searchValue.length > 0)){
+       oDwnLdEl.setAttribute("href", hrefValue);
+        console.log("Im in href assignment");
+    }
+    console.log("hrefValue " + hrefValue);
 });
 
 
