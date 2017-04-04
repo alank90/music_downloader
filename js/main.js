@@ -1,3 +1,5 @@
+// ===== Function Declarations ======//
+
 function cleanEmbedCode (str)  {
    if (str.indexOf('embed') > -1)  {
       let n = str.search(/embed\//);
@@ -18,35 +20,47 @@ function cleanEmbedCode (str)  {
     return str;
 }
 
+//==== End Functions Declarations =====//
 
 
-
+ //==== Main Body of JS ====================//
 var oEl = document.getElementById("video_tag_value");
 oEl.addEventListener("focus", function (e) {
    // Color Input background on focus
     e.target.style.background = "#E6F0F9";
 });
 
-// Clean embed code and send it off to YouTube formatted ..
-oEl.addEventListener("blur", function (e) {
-       //Retrieve text from input box
-    var searchValue = document.getElementById('video_tag_value').value;
-    searchValue = cleanEmbedCode(searchValue);
-    e.target.style.background = "#FFFFFF";
 
+// Clean embed code add it to prefix for mp3.com and send it off to YouTube formatted ...
+oEl.addEventListener("blur", function (e) {
     var oDwnLdEl = document.querySelector('a[href*= "//www.youtubeinmp3.com/fetch/"]');
     var hrefValue = oDwnLdEl.getAttribute("href");
-    hrefValue += searchValue;
-    console.log("searchValue: " + searchValue);
-    console.log("hrefValue: " + hrefValue);
-    console.log("searchValue.length is: " + searchValue.length)
-    console.log("indexOf value" + hrefValue.indexOf(searchValue));
-    if ((hrefValue.indexOf(searchValue) === 0) && (searchValue.length > 0)){
-       oDwnLdEl.setAttribute("href", hrefValue);
-        console.log("Im in href assignment");
+     console.log("hrefValue: " + hrefValue);
+
+     //Retrieve text from input box
+    var searchValue = document.getElementById('video_tag_value').value;
+
+    if (searchValue !== "")  {
+       searchValue = cleanEmbedCode(searchValue);
+       e.target.style.background = "#FFFFFF";
+        console.log("searchValue is " + searchValue);
+       console.log("Attention!!! indexOf value  " + hrefValue.indexOf(searchValue));
+
+       if ((hrefValue.indexOf(searchValue) !== -1)){
+         //Do nothing. searchValue is already in hrefValue.
+           console.log("Do nothing. Prefix on already.");
+        }
+        else {
+            console.log("I'm adding searchVale to hrefValue");
+            hrefValue += searchValue;
+            oDwnLdEl.setAttribute("href", hrefValue);
+        }
     }
-    console.log("hrefValue " + hrefValue);
-});
+    else {
+        alert("Please enter an Embed Code.");
+    }
+
+});  // End of Eventhandler
 
 
 var oyouTubeSearchForm = document.getElementById('youtube_search_form');
