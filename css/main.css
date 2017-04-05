@@ -88,7 +88,7 @@ input {
     border: solid 2px #517E9D;
 }
 
-a[href*="//www.youtubeinmp3.com/fetch/"] {
+#url_prefix {
     display: block;
     margin-top: 4rem;
     margin-left: 48vw;
