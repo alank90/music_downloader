@@ -54,11 +54,14 @@ var oyouTubeSearchForm = document.getElementById('youtube_search_form');
 var oyouTubeLogo = document.querySelector('img[alt="youtube_logo"]');
 var oyouTubeSearchValue = document.getElementById("search_query");
 var oyouTubeSubmit = document.getElementById("youtube_submit");
+var oMain  = document.getElementById("main");
 
 // Event Handler to toggle visibility of search form
 oyouTubeLogo.addEventListener("click", function (e) {
     oyouTubeSearchForm.classList.toggle("hidden");
+    oMain.classList.toggle("blurgrayscale");
 });
+
 // Event handler for YouTube Search Form Submit
 oyouTubeSubmit.addEventListener("click", function (e) {
     e.preventDefault();
