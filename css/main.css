@@ -34,28 +34,96 @@ nav {
     position: absolute;
     left: 0;
     right: 0;
-    margin-top:  10px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50vw;
+    top: -15vh;
+    margin: 5px auto;
+    width: 25vw;
+    min-width: 250px;
+    height: 60vh;
     /* Need a specific value to work */
     background-color: rgba(135, 206, 235, .9);
     border-radius: 8px;
     z-index: 999;
+    animation-name: bounce;
+    animation-duration: 3s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
 }
 
-    #youtube_search_form input {
-      display: block;
-      width: 35vw;
-      height: auto;
-      margin: 3vh auto;
+     #youtube_search_form input {
+       font-size: 1.2rem;
+       display: block;
+       width: 20vw;
+       min-width: 5rem;
+       height: auto;
+       margin: 2vh auto;
      }
      #youtube_submit {
-         max-width: 15vw;
+         font-size: 1.2rem;
+         max-width: 10vw;
          cursor: pointer;
          text-align: center;
          background-color: darkgrey;
+
      }
+
+/* Standard Syntax for Bounce effect */
+@keyframes  bounce  {
+  0% {
+	  transform:translateY(-100%);
+	  opacity: 0;
+  }
+  5% {
+  	transform:translateY(-100%);
+    opacity: 0;
+   }
+
+  15% {
+    transform:translateY(0);
+    padding-bottom: 5px;
+   }
+
+  30% {
+    transform:translateY(-50%);
+  }
+
+  40% {
+  	transform:translateY(0%);
+    padding-bottom: 6px;
+  }
+
+  50% {
+   transform:translateY(-30%);
+  }
+
+  70% {
+    transform: translateY(0%);
+    padding-bottom: 7px;
+  }
+  80% {
+    transform:translateY(-15%);
+  }
+
+  90% {
+   transform:translateY(0%);
+   padding-bottom: 8px;
+  }
+  95% {
+   transform:translateY(-7%);
+  }
+  97% {
+   transform:translateY(0%);
+   padding-bottom: 9px;
+ }
+ 99% {
+   transform:translateY(-3%);
+ }
+ 100% {
+   transform:translateY(0);
+   padding-bottom: 9px;
+   opacity: 1;
+ }
+
+}
 
 h1 {
     font-family: 'Nothing You Could Do', cursive;
@@ -77,6 +145,8 @@ label {
 }
     form label  {
       font-family: Arial;
+      padding: 2vh;
+      margin-bottom: 8vh;
     }
 
 input {
@@ -109,7 +179,6 @@ input {
 .blurgrayscale {
   filter: blur(3px) grayscale(100%);
   opacity: 0.6;
-
 }
 
 
