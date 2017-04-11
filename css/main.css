@@ -12,7 +12,7 @@ img {
 }
 
   img[alt="download"] {
-      width: 35px;
+      width: 6vw;
       vertical-align: middle;
 }
 
@@ -30,13 +30,19 @@ nav {
     height: 12vh;
 }
 
+#close  {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+
 #youtube_search_form {
     position: absolute;
     left: 0;
     right: 0;
-    top: -15vh;
+    top: 10vh;
     margin: 5px auto;
-    width: 25vw;
+    width: 20vw;
     min-width: 250px;
     height: 60vh;
     /* Need a specific value to work */
@@ -50,16 +56,16 @@ nav {
 }
 
      #youtube_search_form input {
-       font-size: 1.2rem;
+       font-size: 1.4rem;
        display: block;
-       width: 20vw;
+       width: 18vw;
        min-width: 5rem;
-       height: auto;
+       height: 3rem;
        margin: 2vh auto;
      }
      #youtube_submit {
-         font-size: 1.2rem;
          max-width: 10vw;
+         max-height: 5vh;
          cursor: pointer;
          text-align: center;
          background-color: darkgrey;
@@ -126,8 +132,8 @@ nav {
 }
 
 h1 {
-    font-family: 'Nothing You Could Do', cursive;
-    font-size: 5rem;
+    font-family: 'Audiowide', cursive;
+    font-size: 3.5rem;
     text-align: center;
     margin-top: 3rem;
 }
@@ -137,25 +143,26 @@ main {
 }
 
 label {
-    font-family: 'Nothing You Could Do', cursive;
-    font-size: 3rem;
+    font-family: 'Audiowide', cursive;
+    font-size: 2rem;
     text-align: center;
     display: block;
     margin-top: 7rem;
 }
     form label  {
       font-family: Arial;
-      padding: 2vh;
-      margin-bottom: 8vh;
+      font-size: 2.5rem;
+      margin-top: 6.5vh;
+      margin-bottom: 18vh;
     }
 
 input {
-    font-family: 'Nothing You Could Do', cursive;
+    font-family: Arial;
     display: inline-block;
     margin-top: 5vh;
     margin-left: 30vw;
-    width: 45vw;
-    height: 7vh;
+    width: 35vw;
+    height: 8vh;
     border-radius: 15px;
     font-size: 1.7rem;
     line-height: 1.6rem;
@@ -165,10 +172,13 @@ input {
 #url_prefix {
     display: block;
     margin-top: 4rem;
-    margin-left: 48vw;
+    margin-left: 35vw;
     font-size: 3rem;
     color: #254B6F;
     text-decoration: none;
+}
+strong  {
+    color: #05182a;
 }
 
 .hidden {

@@ -54,7 +54,8 @@ var oyouTubeSearchForm = document.getElementById('youtube_search_form');
 var oyouTubeLogo = document.querySelector('img[alt="youtube_logo"]');
 var oyouTubeSearchValue = document.getElementById("search_query");
 var oyouTubeSubmit = document.getElementById("youtube_submit");
-var oMain  = document.getElementById("main");
+var oMain = document.getElementById("main");
+var oCloseButton = document.getElementById("close");
 
 // Event Handler to toggle visibility of search form
 oyouTubeLogo.addEventListener("click", function (e) {
@@ -65,7 +66,15 @@ oyouTubeLogo.addEventListener("click", function (e) {
 // Event handler for YouTube Search Form Submit
 oyouTubeSubmit.addEventListener("click", function (e) {
     e.preventDefault();
+    oMain.classList.remove("blurgrayscale");
     let searchValue = oyouTubeSearchValue.value;
     oyouTubeSearchForm.classList.add("hidden");
     window.open(src = "https://www.youtube.com/results?search_query=" + searchValue, "YouTube Results", "top=150,resizabele=yes,width=600,height=800,menubar=no,scrollbars=yes");
+
+})
+
+// Event Handler to close YouTube dialog with close button
+oCloseButton.addEventListener("click", function() {
+   oyouTubeSearchForm.classList.add("hidden");
+   oMain.classList.remove("blurgrayscale");
 })
