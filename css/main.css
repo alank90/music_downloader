@@ -61,10 +61,14 @@ nav {
     background-color: rgba(135, 206, 235, .9);
     border-radius: 8px;
     z-index: 999;
-    animation-name: bounce;
-    animation-duration: 3s;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
+    -webkit-animation-name: bounce;
+            animation-name: bounce;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
 }
 
      #youtube_search_form input {
@@ -85,58 +89,141 @@ nav {
      }
 
 /* Standard Syntax for Bounce effect */
-@keyframes  bounce  {
+@-webkit-keyframes  bounce  {
   0% {
-	  transform:translateY(-100%);
+	  -webkit-transform:translateY(-100%);
+	          transform:translateY(-100%);
 	  opacity: 0;
   }
   5% {
-  	transform:translateY(-100%);
+  	-webkit-transform:translateY(-100%);
+  	        transform:translateY(-100%);
     opacity: 0;
    }
 
   15% {
-    transform:translateY(0);
+    -webkit-transform:translateY(0);
+            transform:translateY(0);
     padding-bottom: 5px;
    }
 
   30% {
-    transform:translateY(-50%);
+    -webkit-transform:translateY(-50%);
+            transform:translateY(-50%);
   }
 
   40% {
-  	transform:translateY(0%);
+  	-webkit-transform:translateY(0%);
+  	        transform:translateY(0%);
     padding-bottom: 6px;
   }
 
   50% {
-   transform:translateY(-30%);
+   -webkit-transform:translateY(-30%);
+           transform:translateY(-30%);
   }
 
   70% {
-    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
     padding-bottom: 7px;
   }
   80% {
-    transform:translateY(-15%);
+    -webkit-transform:translateY(-15%);
+            transform:translateY(-15%);
   }
 
   90% {
-   transform:translateY(0%);
+   -webkit-transform:translateY(0%);
+           transform:translateY(0%);
    padding-bottom: 8px;
   }
   95% {
-   transform:translateY(-7%);
+   -webkit-transform:translateY(-7%);
+           transform:translateY(-7%);
   }
   97% {
-   transform:translateY(0%);
+   -webkit-transform:translateY(0%);
+           transform:translateY(0%);
    padding-bottom: 9px;
  }
  99% {
-   transform:translateY(-3%);
+   -webkit-transform:translateY(-3%);
+           transform:translateY(-3%);
  }
  100% {
-   transform:translateY(0);
+   -webkit-transform:translateY(0);
+           transform:translateY(0);
+   padding-bottom: 9px;
+   opacity: 1;
+ }
+
+}
+@keyframes  bounce  {
+  0% {
+	  -webkit-transform:translateY(-100%);
+	          transform:translateY(-100%);
+	  opacity: 0;
+  }
+  5% {
+  	-webkit-transform:translateY(-100%);
+  	        transform:translateY(-100%);
+    opacity: 0;
+   }
+
+  15% {
+    -webkit-transform:translateY(0);
+            transform:translateY(0);
+    padding-bottom: 5px;
+   }
+
+  30% {
+    -webkit-transform:translateY(-50%);
+            transform:translateY(-50%);
+  }
+
+  40% {
+  	-webkit-transform:translateY(0%);
+  	        transform:translateY(0%);
+    padding-bottom: 6px;
+  }
+
+  50% {
+   -webkit-transform:translateY(-30%);
+           transform:translateY(-30%);
+  }
+
+  70% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    padding-bottom: 7px;
+  }
+  80% {
+    -webkit-transform:translateY(-15%);
+            transform:translateY(-15%);
+  }
+
+  90% {
+   -webkit-transform:translateY(0%);
+           transform:translateY(0%);
+   padding-bottom: 8px;
+  }
+  95% {
+   -webkit-transform:translateY(-7%);
+           transform:translateY(-7%);
+  }
+  97% {
+   -webkit-transform:translateY(0%);
+           transform:translateY(0%);
+   padding-bottom: 9px;
+ }
+ 99% {
+   -webkit-transform:translateY(-3%);
+           transform:translateY(-3%);
+ }
+ 100% {
+   -webkit-transform:translateY(0);
+           transform:translateY(0);
    padding-bottom: 9px;
    opacity: 1;
  }
@@ -199,7 +286,8 @@ strong  {
 }
 
 .blurgrayscale {
-  filter: blur(3px) grayscale(100%);
+  -webkit-filter: blur(3px) grayscale(100%);
+          filter: blur(3px) grayscale(100%);
   opacity: 0.6;
 }
 
