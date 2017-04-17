@@ -15,6 +15,7 @@ img {
 
 img[alt="download"] {
     width: 6vw;
+    min-width: 50px;
     vertical-align: middle;
 }
 
@@ -71,6 +72,7 @@ figcaption {
     animation-delay: 0s;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
+    transition: all .3s;
 }
 
 #youtube_search_form input {
@@ -79,6 +81,7 @@ figcaption {
     width: 18vw;
     height: 3.5rem;
     margin: 2vh auto;
+    transition: all .3s;
 }
 
 #youtube_submit {
@@ -88,6 +91,7 @@ figcaption {
     cursor: pointer;
     text-align: center;
     background-color: darkgrey;
+    transition: all .3s
 }
 
 
@@ -259,3 +263,18 @@ strong {
     filter: blur(3px) grayscale(100%);
     opacity: 0.6;
 }
+
+/*Media Rules*/
+@media screen and (min-width: 1400px) {
+    #youtube_search_form {
+        max-height: 600px;
+        max-width: 300px;
+    }
+    #search_query  {
+        max-width: 200px;
+    }
+    img[alt="download"] {
+        max-width: 100px
+    }
+}
+
