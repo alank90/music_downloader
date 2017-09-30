@@ -71,10 +71,10 @@ oyouTubeSubmit.addEventListener("click", function (e) {
     oyouTubeSearchForm.classList.add("hidden");
     window.open(src = "https://www.youtube.com/results?search_query=" + searchValue, "YouTube Results", "top=150,resizabele=yes,width=600,height=800,menubar=no,scrollbars=yes");
 
-})
+});
 
 // Event Handler to close YouTube dialog with close button
 oCloseButton.addEventListener("click", function() {
    oyouTubeSearchForm.classList.add("hidden");
    oMain.classList.remove("blurgrayscale");
-})
+});
