@@ -78,3 +78,4 @@ oCloseButton.addEventListener("click", function() {
    oyouTubeSearchForm.classList.add("hidden");
    oMain.classList.remove("blurgrayscale");
 });
+
